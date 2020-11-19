@@ -10,6 +10,9 @@ public class QuestionSearcher {
             put("5-3", new Question3());
             put("5-4", new Question4());
             put("5-5", new Question5());
+            put("5-6", new Question6());
+            put("5-7", new Question7());
+            put("5-8", new Question8());
             put("err", new OutOfQuestion());
         }
     };

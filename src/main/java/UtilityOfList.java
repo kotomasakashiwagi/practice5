@@ -38,4 +38,21 @@ public class UtilityOfList {
         return sum;
     }
 
+    public static int[][] createKuKu() {
+        int[][] kuKu = new int[9][9];
+        for (int i = 0; i < 9; i++) {
+            for (int j = i; j < 9; j++) {
+                int ijElement = (i + 1) * (j + 1);
+                kuKu[i][j] = ijElement;
+                kuKu[j][i] = ijElement;
+            }
+        }
+        return kuKu;
+    }
+
+    public static int calculateKuKu(IntPair kuKuPair) {
+        int[][] kuKu = createKuKu();
+        return kuKu[kuKuPair.getX() - 1][kuKuPair.getY() - 1];
+    }
+
 }

@@ -9,7 +9,7 @@ public class Question8 implements Question {
             List<Integer> tenIntegersList = ListScanner.scanListInt();
             List<Integer> ascendingOrderList = UtilityOfList.makeListAscendingOrder(tenIntegersList);
             ListPrinter.printIntList(ascendingOrderList);
-        }catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.err.println("整数を入力してください。");
         }
 

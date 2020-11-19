@@ -54,9 +54,10 @@ public class UtilityOfList {
         int[][] kuKu = createKuKu();
         return kuKu[kuKuPair.getX() - 1][kuKuPair.getY() - 1];
     }
-    public static List<Integer> makeListAscendingOrder(List<Integer> OriginalList){
+
+    public static List<Integer> makeListAscendingOrder(List<Integer> OriginalList) {
         List<Integer> ascendingOrderList = new ArrayList<>();
-        while(OriginalList.size()>0) {
+        while (OriginalList.size() > 0) {
             int value = OriginalList.get(0);
             for (int i = 0; i < OriginalList.size(); i++) {
                 if (value > OriginalList.get(i)) {

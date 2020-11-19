@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public interface Question {
-    void run();
+    void run() throws IOException;
 }

@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,15 +9,16 @@ public class QuestionSearcher {
             put("5-2", new Question2());
             put("5-3", new Question3());
             put("5-4", new Question4());
+            put("5-5", new Question5());
             put("err", new OutOfQuestion());
         }
     };
 
-    public static void selectQuestion(String questionNumber) {
+    public static void selectQuestion(String questionNumber) throws IOException {
         System.out.println(questionNumber);
         try {
             questionMap.get(questionNumber).run();
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | IOException e) {
             questionMap.get("err").run();
         }
     }
